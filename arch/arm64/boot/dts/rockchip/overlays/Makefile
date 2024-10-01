@@ -289,6 +289,7 @@ dtb-$(CONFIG_CPU_RK3568) += \
 	radxa-cm3-io-jymx1013833281be-display.dtbo \
 	radxa-cm3-io-radxa-10p1inch-display.dtbo \
 	radxa-cm3-io-radxa-display-8hd.dtbo \
+        radxa-cm3-io-BOE_gv101wxm-n81.dtbo \
 	radxa-cm3-io-radxa-display-10fhd.dtbo \
 	radxa-cm3-io-sata1.dtbo \
 	radxa-cm3-io-sata2.dtbo \
