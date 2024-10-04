@@ -8,7 +8,7 @@
 
 / {
 	metadata {
-		title = "Enable BOE gv101wxm-n81 Display with gt911 touchscreen";
+		title = "Enable BOE gv101wxm-n81 Display with gt911 touchscreen v3";
 		compatible = "radxa,cm3-io";
 		category = "display";
 		exclusive = "edp", "vp0", "pwm5";
@@ -25,7 +25,7 @@ HDMI will be disabled.";
 		regulator-name = "vcc_lcd_tp";
 		pinctrl-names = "default";
 		pinctrl-0 = <&vcc_tp>;
-		gpio = <&gpio2 RK_PC6 GPIO_ACTIVE_LOW>;
+		gpio = <&gpio2 RK_PC6 GPIO_ACTIVE_HIGH>;
 		enable-active-low;
 		regulator-boot-on;
 		regulator-state-mem {
