@@ -19,14 +19,12 @@ HDMI will be disabled.";
 };
 
 &{/} {
-	vcc_lcd_tp: vcc-lcd-tp {
+	vcc_tp: vcc-tp {
 		status = "okay";
 		compatible = "regulator-fixed";
-		regulator-name = "vcc_lcd_tp";
-		pinctrl-names = "default";
-		pinctrl-0 = <&vcc_tp>;
+		regulator-name = "vcc_tp";
 		gpio = <&gpio2 RK_PC6 GPIO_ACTIVE_HIGH>;
-		enable-active-low;
+		enable-active-high;
 		regulator-boot-on;
 		regulator-state-mem {
 			regulator-off-in-suspend;
@@ -184,7 +182,7 @@ HDMI will be disabled.";
 		max-x = <2050>;
 		max-y = <2000>;
 		tp-size = <9271>;
-		tp-supply = <&vcc_lcd_tp>;
+		tp-supply = <&vcc_tp>;
 	};
 };
 
@@ -193,12 +191,6 @@ HDMI will be disabled.";
 };
 
 &pinctrl {
-	lcd-vcc {
-		vcc_tp: vcc-tp {
-			rockchip,pins = <2 RK_PC6 RK_FUNC_GPIO &pcfg_pull_down>;
-		};
-	};
-
 	gt9xx {
 		gt9xx_gpio: gt9xx-gpio {
 			rockchip,pins =
