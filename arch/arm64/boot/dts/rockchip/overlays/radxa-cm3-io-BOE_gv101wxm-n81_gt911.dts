@@ -168,7 +168,7 @@ HDMI will be disabled.";
 
 &i2c3 {
 	status = "okay";
-	pinctrl-0 = <&i2c3m1_xfer>;
+	pinctrl-0 = <&i2c3m0_xfer>;
 	clock-frequency = <400000>;
 	#address-cells = <1>;
 	#size-cells = <0>;
