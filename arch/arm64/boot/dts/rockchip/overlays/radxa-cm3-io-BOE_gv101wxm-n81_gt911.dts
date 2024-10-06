@@ -8,7 +8,7 @@
 
 / {
 	metadata {
-		title = "Enable BOE gv101wxm-n81 Display with gt911 touchscreen v4";
+		title = "Enable BOE gv101wxm-n81 Display with gt911 touchscreen v5";
 		compatible = "radxa,cm3-io";
 		category = "display";
 		exclusive = "edp", "vp0", "pwm5";
@@ -26,7 +26,6 @@ HDMI will be disabled.";
 		gpio = <&gpio2 RK_PC6 GPIO_ACTIVE_HIGH>;
 		enable-active-high;
 		regulator-boot-on;
-    regulator-always-on;
 		regulator-state-mem {
 			regulator-off-in-suspend;
 		};
@@ -172,10 +171,10 @@ HDMI will be disabled.";
 	#address-cells = <1>;
 	#size-cells = <0>;
 
-	gt9xx: gt9xx@14 {
+	gt9xx: gt9xx@5d {
 		status = "okay";
 		compatible = "goodix,gt9xx";
-		reg = <0x14>;
+		reg = <0x5d>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&gt9xx_gpio>;
 		touch-gpio = <&gpio3 RK_PC1 IRQ_TYPE_LEVEL_HIGH>;
