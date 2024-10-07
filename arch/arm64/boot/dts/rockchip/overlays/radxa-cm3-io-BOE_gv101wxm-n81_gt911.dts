@@ -171,12 +171,12 @@ HDMI will be disabled.";
 	#address-cells = <1>;
 	#size-cells = <0>;
 
-	gt9xx: gt9xx@5d {
+	gt9271: gt9271@5d {
 		status = "okay";
 		compatible = "goodix,gt9271";
 		reg = <0x5d>;
 		pinctrl-names = "default";
-		pinctrl-0 = <&gt9xx_gpio>;
+		pinctrl-0 = <&gt9271_gpio>;
 		touch-gpio = <&gpio3 RK_PC1 IRQ_TYPE_LEVEL_HIGH>;
 		reset-gpio = <&gpio3 RK_PB4 GPIO_ACTIVE_HIGH>;
 		max-x = <2050>;
@@ -191,8 +191,8 @@ HDMI will be disabled.";
 };
 
 &pinctrl {
-	gt9xx {
-		gt9xx_gpio: gt9xx-gpio {
+	gt9271 {
+		gt9271_gpio: gt9271-gpio {
 			rockchip,pins =
 			<3 RK_PB4 RK_FUNC_GPIO &pcfg_pull_up>,
 			<3 RK_PC1 RK_FUNC_GPIO &pcfg_pull_none>;
