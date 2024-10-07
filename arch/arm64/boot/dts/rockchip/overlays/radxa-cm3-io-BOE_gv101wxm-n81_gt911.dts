@@ -8,12 +8,12 @@
 
 / {
 	metadata {
-		title = "Enable BOE gv101wxm-n81 Display with gt911 touchscreen v8";
+		title = "Enable BOE gv101wxm-n81 Display with gt9271 touchscreen v9";
 		compatible = "radxa,cm3-io";
 		category = "display";
 		exclusive = "edp", "vp0", "pwm5";
 		description = "Enable BOE gv101wxm-n81 display.
-with gt911 touchscreen.
+with gt9271 touchscreen.
 HDMI will be disabled.";
 	};
 };
@@ -177,8 +177,10 @@ HDMI will be disabled.";
 		reg = <0x5d>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&gt9271_gpio>;
-		irq-gpios = <&gpio3 RK_PC1 IRQ_TYPE_LEVEL_HIGH>;
-		reset-gpios = <&gpio3 RK_PB4 GPIO_ACTIVE_HIGH>;
+                interrupt-parent = <&gpio3>;
+                interrupts = <RK_PC1 0>;
+		irq-gpios = <&gpio3 RK_PC1 0>;
+		reset-gpios = <&gpio3 RK_PB4 1>;
 		max-x = <2050>;
 		max-y = <2000>;
 		tp-size = <9271>;
