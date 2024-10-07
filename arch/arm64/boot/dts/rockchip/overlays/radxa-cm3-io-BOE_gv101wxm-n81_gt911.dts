@@ -8,7 +8,7 @@
 
 / {
 	metadata {
-		title = "Enable BOE gv101wxm-n81 Display with gt911 touchscreen v6";
+		title = "Enable BOE gv101wxm-n81 Display with gt911 touchscreen v7";
 		compatible = "radxa,cm3-io";
 		category = "display";
 		exclusive = "edp", "vp0", "pwm5";
