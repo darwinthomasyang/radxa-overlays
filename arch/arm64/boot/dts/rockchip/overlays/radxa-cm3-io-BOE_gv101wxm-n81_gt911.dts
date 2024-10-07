@@ -8,7 +8,7 @@
 
 / {
 	metadata {
-		title = "Enable BOE gv101wxm-n81 Display with gt911 touchscreen v5";
+		title = "Enable BOE gv101wxm-n81 Display with gt911 touchscreen v6";
 		compatible = "radxa,cm3-io";
 		category = "display";
 		exclusive = "edp", "vp0", "pwm5";
@@ -173,7 +173,7 @@ HDMI will be disabled.";
 
 	gt9xx: gt9xx@5d {
 		status = "okay";
-		compatible = "goodix,gt9xx";
+		compatible = "goodix,gt9271";
 		reg = <0x5d>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&gt9xx_gpio>;
